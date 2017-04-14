@@ -1,8 +1,7 @@
-grm='../AGDFieldGenomics/GMAT/MH2015GCMS/MH2015CMS_asreml.grm'
-genolinkped='../AGDFieldGenomics/GMAT/MH2015GCMS/grm.orig_codedIDs'
-pedigree='../AGDFieldGenomics/GMAT/MH2015GCMS/pedigreeMH2015G.txt'
-
-outname='AGDMH2015G'
+grm='../AGDFieldGenomics/GMAT/MHgeno/AGD_GS_asreml.grm'
+genolinkped='../AGDFieldGenomics/GMAT/MHgeno/grm.orig_codedIDs'
+pedigree='../AGDFieldGenomics/GMAT/MHgeno/pedigree.txt'
+outname='G2015_FS'
 
 source('extfullsib_GRM.R')
-AGDMH <- extfullsib_GRM(grm ,pedigree,genolinkped,exclfamsize=10,outname)
+AGDMH <- extfullsib_GRM(grm ,pedigree,genolinkped,exclfamsize=1,outname)
