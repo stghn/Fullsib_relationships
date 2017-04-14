@@ -5,4 +5,4 @@ pedigree='../AGDFieldGenomics/GMAT/MH2015GCMS/pedigreeMH2015G.txt'
 outname='AGDMH2015G'
 
 source('extfullsib_GRM.R')
-AGDMH <- extfullsib_GRM(grm ,pedigree,genolinkped,exclfamsize=13,outname)
+AGDMH <- extfullsib_GRM(grm ,pedigree,genolinkped,exclfamsize=10,outname)
