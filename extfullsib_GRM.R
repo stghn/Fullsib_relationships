@@ -27,6 +27,7 @@ extfullsib_GRM <- function(grm,pedigree,genolinkped,exclfamsize=1,outname){
   }
   cat('\n... Extracting full-sib relationships per family ...\n')
   genoanimped <- genoanimped[genoanimped$famIDseqID %in% usefam,]
+  iterchecks <- round(length(usefam)/5,digits=0)
   for(f in 1:length(usefam)){
     fullsibsg <- genoanimped[genoanimped$famIDseqID %in% usefam[f],]
     fullsibsg <- expand.grid(as.vector(fullsibsg$seqID),as.vector(fullsibsg$seqID),stringsAsFactors=F)
@@ -41,7 +42,7 @@ extfullsib_GRM <- function(grm,pedigree,genolinkped,exclfamsize=1,outname){
       if(f==1 & fsize==1){FSgrm <- fullsibgrm
       } else {FSgrm <- rbind.data.frame(FSgrm,fullsibgrm,stringsAsFactors=F)}
     }
-    if(f %% 10==0){cat('... fullsib family ...',f,' (out of ',length(usefam),') ...\n')}
+    if(f %% iterchecks==0){cat('... fullsib family ...',f,' (out of ',length(usefam),') ...\n')}
     rm(fullsibgrm,fullsibsg)
   }
   colnames(FSgrm) <- c('IID1','IID2','G','seqfamID')

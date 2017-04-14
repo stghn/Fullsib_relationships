@@ -1,4 +1,4 @@
-## Extracting Fullsibs from a G matrix and plotting the results
+## Extracting Fullsib relationships from a G matrix and plotting the results
 
 ### The script requires the following
         
