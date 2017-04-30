@@ -5,8 +5,8 @@
         
         - grm             ==> Genomic relationships in long column and rowwise format (not in matrix format) 
         - pedigree        ==> pedigree file (ID, sire and Dam, missing parent = NA)
-        - genolinkped     ==> linking animals in the G matrix to pedigre  (2 columns IID-pedigree, IID-G matrix)
-        - typefam         ==> type of familial relationships to extract (only two types are supported fullsib =FS' and hlfsib='HS' )
+        - genolinkped     ==> linking animals in the G matrix to pedigree  (2 columns IID-pedigree, IID-G matrix)
+        - typefam         ==> type of familial relationships to extract (only two types are supported fullsib ='FS' and hlfsib='HS' )
         - exclfamsize     ==> exclude families with n number of animals (e.g. a family with 1 animal)
         - outname         ==> output name of the graph and the output file 
         
